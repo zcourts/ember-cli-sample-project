@@ -38,46 +38,9 @@ Database.prototype.forOrg = function (name, cb) {
       db.PermissionKeys.belongsTo(db.PermissionBuckets);
       db.PermissionKeys.hasMany(db.PermissionValues);
       db.PermissionValues.belongsTo(db.PermissionKeys);
-      //address
-      db.Address.belongsTo(db.Customer);
-      db.Address.belongsToMany(db.Quote, {as: 'ConsigneeAddress'});
-      db.Address.belongsToMany(db.Quote, {as: 'CustomerAddress'});
-      //agent
-      db.Agent.belongsTo(db.Shipment);
-      db.Agent.belongsTo(db.Organization);
-      //carrier
-      db.Carrier.belongsTo(db.Shipment);
-      db.Carrier.belongsTo(db.Organization);
-      //customer
-      db.Customer.hasMany(db.Address);
-      db.Customer.belongsTo(db.Organization);
-      db.Customer.belongsTo(db.Quote, {as: 'Consignee'});
-      db.Customer.belongsTo(db.Quote, {as: 'Customer'});
-      //discount
-      db.Discount.belongsTo(db.Quote);
-      db.Discount.belongsTo(db.Organization);
-      //invoice
-      db.Invoice.belongsTo(db.Quote);
-      //partner
-      db.Partner.hasMany(db.User);
-      db.Partner.belongsTo(db.Organization);
-      //product
-      db.Product.belongsTo(db.Organization);
-      db.Product.belongsTo(db.Quote);
-      //quote
-      db.Quote.hasOne(db.Invoice);
-      db.Quote.hasMany(db.Product);
-      db.Quote.hasMany(db.Discount);
-      //db.Quote.belongsTo(db.Address, {as: 'ConsigneeAddress'});
-      //db.Quote.belongsTo(db.Address, {as: 'CustomerAddress'});
-      db.Quote.belongsTo(db.Organization);
-      db.Quote.belongsTo(db.Shipment);
-      //shipment
-      db.Shipment.hasMany(db.Quote);
-      db.Shipment.belongsTo(db.Organization);
       //user
       db.User.belongsTo(db.Organization);
-      db.User.hasMany(db.Quote);
+      //db.User.hasMany(db.Role);
       //organization
       db.Organization.hasMany(db.User);
       db.Organization.hasMany(db.Partner);

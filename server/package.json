@@ -23,5 +23,10 @@
     "mocha": "^2.1.0",
     "should": "^4.4.1",
     "supertest": "^0.15.0"
+  },
+  "scripts": {
+    "test": "mocha --require tests/support/env --reporter spec --bail --check-leaks tests/ tests/acceptance/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require tests/support/env --reporter spec --check-leaks tests/ tests/acceptance/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require tests/support/env --reporter spec --check-leaks tests/ tests/acceptance/"
   }
 }

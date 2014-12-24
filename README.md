@@ -32,3 +32,11 @@ edit configuration. Change th configuration to be similar to
 ![www configuration example](https://cloud.githubusercontent.com/assets/692396/5546249/412f9210-8b35-11e4-8f54-9179ee413968.png)
 
 The server should now be available at http://localhost:3000 ,  the app at http://localhost:3000/app
+
+Run tests using
+
+```bash
+npm test
+# or for coverage
+npm run-script test-cov
+```
