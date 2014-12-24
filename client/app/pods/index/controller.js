@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import SlGridMixin from 'sl-ember-components/mixins/sl-grid-controller';
-import SlGetTranslate from 'sl-ember-translate/mixins/sl-get-translation';
 
 export default Ember.ArrayController.extend(SlGridMixin, {
   gridDefinition: {
@@ -39,8 +38,7 @@ export default Ember.ArrayController.extend(SlGridMixin, {
     ]
   },
   accessToken: function () {
-    //console.log(this.get('user'), this.get('user').get('devlr'));
-    var currentUser = this.get('user');
-    console.log(this.get('model'))
+    //var currentUser = this.get('user');
+    console.log(this.get('model'));
   }.property('accessToken')
 });
