@@ -1,0 +1,16 @@
+<div class="col-md-10">
+    <h2>{{t 'app-name'}}</h2>
+
+  {{#sl-panel}}
+    <div class="text-right">
+    {{#sl-tooltip title="Configuration"}}
+        {{sl-grid-header-settings class="btn-group dropdown"
+            settings=settings.options.settingsMenu columns=settings.columns}}
+    {{/sl-tooltip}}
+    </div>
+{{/sl-panel}}
+{{partial "sl-grid"}}
+</div>
+<div class="col-md-2">
+    <h2>{{t 'sidebar-header'}}</h2>
+</div>
