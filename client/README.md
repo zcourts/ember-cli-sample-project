@@ -1,14 +1,22 @@
-# Next-step5
+# Client
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+I've tied together some useful libs for building EmberJS applications.
+These are:
+
+* Ember CLI and there for EmberJS
+* CoffeeScript
+* Meterialize JS
+* SCSS
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+* [Node.js](http://nodejs.org/) (with NPM)
+* [Bower](http://bower.io/)
+* [Ember CLI](http://www.ember-cli.com/)
+* [PhantomJS](http://phantomjs.org/)
 
 ## Installation
 
@@ -24,7 +32,9 @@ You will need the following things properly installed on your computer.
 
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
+Make use of the many generators for code, try `ember help generate` for more details.
+For example 
+ember g route user
 
 ### Running Tests
 
