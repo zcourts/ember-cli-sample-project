@@ -1,32 +1,18 @@
 {
-  "name": "NextStep5",
+  "name": "server",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "description": "New Swagger API Project",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "main": "app.js",
   "dependencies": {
-    "accept-language-parser": "^1.0.2",
-    "acl": "^0.4.6",
-    "body-parser": "~1.8.1",
-    "cookie-parser": "~1.3.3",
-    "debug": "~2.0.0",
-    "express": "~4.9.0",
-    "express-handlebars": "^1.1.0",
-    "lodash": "^2.4.1",
-    "log4js": "^0.6.21",
-    "mysql": "^2.5.4",
-    "sequelize": "^2.0.0-rc4",
-    "serve-favicon": "~2.1.3"
+    "restify": "^3.0.1",
+    "swagger-restify-mw": "0.0.x"
   },
   "devDependencies": {
-    "mocha": "^2.1.0",
-    "should": "^4.4.1",
+    "should": "^5.2.0",
     "supertest": "^0.15.0"
-  },
-  "scripts": {
-    "test": "mocha --require tests/support/env --reporter spec --bail --check-leaks tests/ tests/acceptance/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --require tests/support/env --reporter spec --check-leaks tests/ tests/acceptance/",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require tests/support/env --reporter spec --check-leaks tests/ tests/acceptance/"
   }
 }
