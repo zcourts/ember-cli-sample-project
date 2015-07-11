@@ -1,6 +1,6 @@
 /* jshint node: true */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   var ENV = {
     modulePrefix: 'client',
     environment: environment,
@@ -19,6 +19,13 @@ module.exports = function(environment) {
     },
     sassOptions: {
       includePaths: ['bower_components/materialize/sass']
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'"
     }
   };
 
