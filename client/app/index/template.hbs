@@ -1,16 +1,27 @@
-{{#md-card title="index/template.hbs" id="basic-card"}}
-  {{#md-card-content}}
-      Simple card, demonstrating materialize is working :)!<br/>
-      Click an action below to test that coffee script is working too :D!
-      {{#if ok}}
-          <h1>You clicked OK!</h1>
-      {{/if}}
-      {{#if cancel}}
-          <h1>You clicked Cancel!</h1>
-      {{/if}}
-  {{/md-card-content}}
-  {{#md-card-action}}
-    {{md-btn text='Cancel'    action='cancel' class='btn-flat'}}
-    {{md-btn text='OK'    action='ok' class='btn-flat'}}
-  {{/md-card-action}}
-{{/md-card}}
+<div class="welcome-splash">
+  {{#md-card-collapsible }}
+      <!--Register-->
+    {{#md-collapsible icon="mdi-action-perm-identity" title="Register"}}
+      {{md-input label='First name' value=model.firstName}}
+      {{md-input label='Last name' value=model.lastName}}
+
+      {{md-input label='Username' value=model.username}}
+      {{md-input label='Password' value=model.password type="password"}}
+
+      {{md-input label='Phone' value=model.phone }}
+      {{md-input label='Email' value=model.email type="email"}}
+
+      {{md-select content=gender
+      value=model.gender label="Gender" prompt="..." optionLabelPath="content.label"  optionValuePath="content.value"}}
+      {{md-input-date label='Date of birth' value=dob }}
+
+      {{md-btn-submit icon='mdi-content-send' iconPosition='right' text='Submit' action='register'}}
+    {{/md-collapsible}}
+      <!--Login-->
+    {{#md-collapsible icon="mdi-communication-vpn-key" title="Login"}}
+      {{md-input label='Username' value=model.username}}
+      {{md-input label='Password' value=model.password type="password"}}
+      {{md-btn-submit icon='mdi-content-send' iconPosition='right' text='Submit' action='login'}}
+    {{/md-collapsible}}
+  {{/md-card-collapsible}}
+</div>

@@ -1,3 +1,18 @@
-@import 'materialize';
+@import '../../bower_components/materialize/sass/materialize';
 @import 'ember-cli-materialize';
 
+html, body, body > .ember-view {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-splash {
+  width: 100%;
+  height: 100%;
+  background: url("img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.welcome-splash .collapsible-body {
+  background-color: white;
+}

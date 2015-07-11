@@ -1,1 +1,16 @@
-{{outlet}}
+{{#md-card title="index/template.hbs" id="basic-card"}}
+  {{#md-card-content}}
+      Simple card, demonstrating materialize is working :)!<br/>
+      Click an action below to test that coffee script is working too :D!
+      {{#if ok}}
+          <h1>You clicked OK!</h1>
+      {{/if}}
+      {{#if cancel}}
+          <h1>You clicked Cancel!</h1>
+      {{/if}}
+  {{/md-card-content}}
+  {{#md-card-action}}
+    {{md-btn text='Cancel'    action='cancel' class='btn-flat'}}
+    {{md-btn text='OK'    action='ok' class='btn-flat'}}
+  {{/md-card-action}}
+{{/md-card}}
